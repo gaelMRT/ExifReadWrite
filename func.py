@@ -13,3 +13,16 @@ def byteArrayToInt(byteArray):
         result += bill
 
     return result
+def byteArrayToIntMotorola(byteArray):
+    result = int.from_bytes(byteArray,byteorder='big')
+
+    return result
+
+def byteArrayToStr(byteArray):
+    result = ""
+    for x in byteArray:
+        result += ("%02X " % x)
+    return result
+def byteArrayToWord(byteArray):
+    result = byteArray.decode()
+    return result
